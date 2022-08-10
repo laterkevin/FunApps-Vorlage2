@@ -28,7 +28,7 @@ class AppRepository(private val api: MemeApi) {
     // TODO Schreibe hier deinen Code
     suspend fun getMemes() {
         try {
-            val memeList = api.retrofitService.getMemes().memes
+            val memeList = api.retrofitService.getMemes().data.memes
             _memes.value = memeList.shuffled()
         } catch (e: Exception) {
             Log.e(TAG, "Fehler beim shuffeln der Liste!")

@@ -2,6 +2,7 @@ package de.syntax_institut.funappsvorlage.data.remote
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import de.syntax_institut.funappsvorlage.data.datamodels.MemeData
 import de.syntax_institut.funappsvorlage.data.datamodels.MemeList
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -20,7 +21,7 @@ private val retrofit = Retrofit.Builder()
 
 interface MemeApiService {
     @GET("get_memes")
-    suspend fun getMemes(): MemeList
+    suspend fun getMemes(): MemeData
 }
 
 object MemeApi {
