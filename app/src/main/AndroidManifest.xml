@@ -3,6 +3,7 @@
     package="de.syntax_institut.funappsvorlage">
 
     <!-- Füge hier die Internet Berechtigung ein -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
