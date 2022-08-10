@@ -64,5 +64,12 @@ class MemesFragment : Fragment() {
         viewModel.meme.observe(viewLifecycleOwner) {
             binding.rvMemes.adapter = MemeAdapter(it)
         }
+        viewModel.loading.observe(viewLifecycleOwner) {
+            when(it) {
+                ApiStatus.LOADING -> binding.progressBar.visibility = View.VISIBLE
+                ApiStatus.DONE -> binding.progressBar.visibility = View.GONE
+                ApiStatus.ERROR -> binding.progressBar.visibility = View.GONE
+            }
+        }
     }
 }

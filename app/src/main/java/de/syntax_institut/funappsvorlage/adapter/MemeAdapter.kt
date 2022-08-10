@@ -1,17 +1,21 @@
 package de.syntax_institut.funappsvorlage.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.RoundedCornersTransformation
 import de.syntax_institut.funappsvorlage.R
 import de.syntax_institut.funappsvorlage.data.datamodels.Meme
+import de.syntax_institut.funappsvorlage.ui.MemesFragment
+
 
 /**
  * Diese Klasse organisiert mithilfe der ViewHolder Klasse das Recycling
@@ -69,7 +73,7 @@ class MemeAdapter(
         // der den aktuellen Titel in das meme Objekt speichert
         // TODO
         holder.btnSave.setOnClickListener {
-            holder.btnSave.visibility = View.VISIBLE
+            holder.tvTitle
         }
     }
 
